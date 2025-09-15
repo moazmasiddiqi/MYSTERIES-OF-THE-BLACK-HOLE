@@ -11,6 +11,10 @@ It explains the concept of Black Holes in simple terms, combining research-based
 - Educational focus with engaging sections  
 
 ## 🛠 Technologies Used  
+
+https://github.com/user-attachments/assets/377c4afc-d688-4c64-871b-169943ac344b
+
+
 - *HTML5*  
 - *CSS3*  
 
