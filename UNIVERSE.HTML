@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Hole Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      z-index: 1000;
+      border-bottom: 1px solid #333;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+      transform: scale(1.1);
+    }
+
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0.7;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      padding: 15px;
+      background: transparent;
+      border-radius: 10px;
+      width: 80%;
+      font-size: 18px;
+    }
+
+    .overlay h1 {
+      background: transparent;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .overlay p {
+      background: transparent;
+      font-size: 1.1em;
+      line-height: 1.4;
+    }
+
+
+    .blackhole-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .blackhole-video {
+      flex: 1.2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .blackhole-video video {
+      width: 90%;
+      height: 60vh;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px;
+    }
+
+    .blackhole-text {
+      flex: 1;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+
+    .graphics-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .graphics-section h1 {
+      margin-bottom: 20px;
+    }
+
+    .graphics-grid {
+      display: grid;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .graphics-grid video {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .graphics-section p {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+
+    .audio-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+
+    .audio-text {
+      flex: 1;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .audio-card {
+      flex: 1;
+      background: #111;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    .audio-card img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .audio-card audio {
+      width: 100%;
+      outline: none;
+    }
+
+
+    @media only screen and (max-width: 768px) {
+      .overlay h1 {
+        font-size: 1.8em;
+      }
+
+      .overlay p {
+        font-size: 1em;
+      }
+
+      .blackhole-section {
+        flex-direction: column;
+      }
+
+      .blackhole-video video {
+        width: 100%;
+        height: 40vh;
+      }
+
+      .blackhole-text {
+        text-align: center;
+      }
+
+      .graphics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .audio-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media only screen and (min-width: 769px) {
+      .graphics-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media only screen and (min-width: 1600px) {
+      .blackhole-video video {
+        width: 100%;
+        height: 80vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#universe">Universe</a>
+    <a href="#blackhole">Black Holes</a>
+    <a href="#graphics">Graphics</a>
+    <a href="#audio">Sounds</a>
+  </nav>
+
+
+  <div class="video-container" id="universe">
+    <video src="SPCE.mp4" autoplay loop muted></video>
+    <div class="overlay">
+      <h1>Discover the Universe</h1>
+      <p>
+        This website is your gateway to exploring the mysteries of the cosmos.
+        Learn how our Solar System works, what makes Black Holes so powerful,
+        the secrets of Mars, and the wonders of the speed of light — all explained
+        in a simple and fun way.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="blackhole-section" id="blackhole">
+    <div class="blackhole-video">
+      <video src="blackhole.mp4" autoplay loop muted></video>
+    </div>
+    <div class="blackhole-text">
+      <h2>Black Holes: The Cosmic Monsters</h2>
+      <p>
+        Black holes are regions of spacetime where gravity is so strong that nothing,
+        not even light, can escape. They form when massive stars collapse under their
+        own gravity. Black holes come in different sizes, from stellar-mass to
+        supermassive giants at the centers of galaxies, including our Milky Way.
+        Studying them helps us understand the limits of physics, time, and space itself.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="graphics-section" id="graphics">
+    <h1>Some Graphics of Black Holes</h1>
+    <div class="graphics-grid">
+      <video src="graphic1.mp4" autoplay loop muted></video>
+      <video src="graphic2.mp4" autoplay loop muted></video>
+      <video src="graphic3.mp4" autoplay loop muted></video>
+    </div>
+    <p>
+      These graphics showcase how black holes interact with their surroundings.
+      From accretion disks glowing with extreme radiation to the bending of light
+      caused by their immense gravity, these visuals provide a glimpse into one
+      of the most fascinating cosmic phenomena. Each graphic represents a different
+      aspect of black hole behavior, helping us understand what is otherwise invisible.
+    </p>
+  </div>
+
+
+  <div class="audio-section" id="audio">
+    <div class="audio-text">
+      <h2>The Mysterious Sound of a Black Hole</h2>
+      <p>
+        In 2022, NASA released an eerie audio recording of sound waves captured
+        from a black hole in the Perseus galaxy cluster. These waves were converted
+        into audible frequencies, giving us a rare chance to "hear" the cosmos.
+        The sound is deep, haunting, and unlike anything on Earth — a reminder
+        of the unimaginable forces at play in the universe.
+      </p>
+    </div>
+    <div class="audio-card">
+      <img src="graphic4.png" alt="Black Hole">
+      <audio controls>
+        <source src="sound of black hole.mp4" type="audio/mp4">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+</body>
+
+</html>
